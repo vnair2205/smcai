@@ -34,3 +34,11 @@ app.get('/', (req, res) => {
 app.listen(PORT, () => {
   console.log(`Server is running on port: ${PORT}`);
 });
+
+// ... (other imports)
+
+// --- Add this line with your other routes ---
+const authRouter = require('./routes/auth');
+app.use('/api/auth', authRouter);
+
+// ... (rest of the server.js file)
