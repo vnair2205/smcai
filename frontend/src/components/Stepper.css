@@ -1,0 +1,65 @@
+.stepper-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.step-item-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.step-item {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--secondary-dark);
+  border: 2px solid var(--border-color);
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  transition: all 0.4s ease;
+  position: relative;
+  z-index: 2;
+}
+
+.step-item.active {
+  border-color: var(--primary-neon);
+  background-color: var(--primary-neon);
+  color: var(--primary-dark);
+  transform: scale(1.1);
+}
+
+.step-item.completed {
+  border-color: var(--primary-neon);
+  background-color: var(--primary-neon);
+  color: var(--primary-dark);
+}
+
+.step-title {
+  margin-top: 8px;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.step-item.active .step-title {
+  color: var(--text-light);
+}
+
+.step-connector {
+  flex-grow: 1;
+  height: 2px;
+  background-color: var(--border-color);
+  margin: 0 -10px;
+  transform: translateY(-14px);
+  position: relative;
+  z-index: 1;
+}
+
+.step-connector.completed {
+  background-color: var(--primary-neon);
+}
